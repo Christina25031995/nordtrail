@@ -735,7 +735,7 @@ address { font-style: normal; }
 #services {
   position: relative;
   background: var(--color-ink);
-  background-image: url("сервисы.jpg");
+  background-image: url("services.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

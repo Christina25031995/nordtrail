@@ -379,7 +379,7 @@ address { font-style: normal; }
 /* ── 9. Section base ────────────────────────────────────────── */
 .section { padding-block: var(--section-py); }
 .section--surface { background: var(--color-pebble); }
-.section--dark    { background: var(--color-lake);   }
+.section--dark    { background: var(--color-pine-dark); }
 
 /* Section header (centered) */
 .section-header {
@@ -650,7 +650,7 @@ address { font-style: normal; }
 }
 
 #included .included-item {
-  background: var(--color-lake);
+  background: var(--color-pine-dark);
   padding: 1.875rem;
   transition: background var(--t);
 }

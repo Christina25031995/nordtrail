@@ -583,7 +583,7 @@ address { font-style: normal; }
 /* ── 12. GEAR (Снасти) — фото-фон с тёмным overlay ─────────── */
 #gear {
   position: relative;
-  background: var(--color-ink);
+  background-color: var(--color-ink);
   background-image: url("lake-bg.jpg");
   background-size: cover;
   background-position: center;
@@ -595,12 +595,12 @@ address { font-style: normal; }
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(12,24,28,.40) 0%,
-    rgba(12,24,28,.65) 100%
+    rgba(12,24,28,.30) 0%,
+    rgba(12,24,28,.60) 100%
   );
   z-index: 0;
 }
-#gear > * { position: relative; z-index: 1; }
+#gear .container { position: relative; z-index: 1; }
 
 #gear .section-header h2 { color: #fff; }
 #gear .section-header__desc { color: rgba(255,255,255,.7); }
@@ -734,8 +734,8 @@ address { font-style: normal; }
 /* ── 15. SERVICES (Дополнительно) — фото-фон с overlay ─────── */
 #services {
   position: relative;
-  background: var(--color-ink);
-  background-image: url("services.jpg");
+  background-color: var(--color-ink);
+  background-image: url("images/services.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -747,7 +747,7 @@ address { font-style: normal; }
   background: rgba(12,21,25,.65);
   z-index: 0;
 }
-#services > * { position: relative; z-index: 1; }
+#services .container { position: relative; z-index: 1; }
 
 #services .section-header .eyebrow { color: rgba(255,255,255,.45); }
 #services .section-header h2       { color: #fff; }

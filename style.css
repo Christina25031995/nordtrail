@@ -580,13 +580,32 @@ address { font-style: normal; }
   border-radius: 100px;
 }
 
-/* ── 12. GEAR (Снасти) — light + accent top-border cards ────── */
-/* #gear has section--surface → pebble bg, but we make cards linen */
+/* ── 12. GEAR (Снасти) — фото-фон с тёмным overlay ─────────── */
 #gear {
-  background: var(--color-linen);
+  position: relative;
+  background: var(--color-ink);
+  background-image: url("lake-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+#gear::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(12,24,28,.40) 0%,
+    rgba(12,24,28,.65) 100%
+  );
+  z-index: 0;
+}
+#gear > * { position: relative; z-index: 1; }
 
-/* Override included-grid inside gear */
+#gear .section-header h2 { color: #fff; }
+#gear .section-header__desc { color: rgba(255,255,255,.7); }
+#gear .eyebrow { color: rgba(255,255,255,.5); }
+
 #gear .included-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -594,25 +613,26 @@ address { font-style: normal; }
 }
 
 #gear .included-item {
-  background: #fff;
-  border: 1px solid var(--color-pebble-dark);
-  border-top: 3px solid var(--color-pine);
+  background: rgba(12,24,28,.55);
+  border: 1px solid rgba(255,255,255,.12);
   border-radius: var(--r-md);
   padding: 1.5rem;
-  transition: box-shadow var(--t);
+  backdrop-filter: blur(6px);
+  transition: background var(--t);
 }
-#gear .included-item:hover { box-shadow: var(--shadow-sm); }
-
+#gear .included-item:hover {
+  background: rgba(12,24,28,.72);
+}
 #gear .included-item h3 {
   font-family: var(--font-display);
   font-size: 1.125rem;
   font-weight: 500;
-  color: var(--color-ink);
+  color: #fff;
   margin-bottom: .5rem;
 }
 #gear .included-item p {
   font-size: .9375rem;
-  color: var(--color-muted);
+  color: rgba(255,255,255,.7);
   line-height: 1.6;
 }
 
@@ -711,14 +731,27 @@ address { font-style: normal; }
   line-height: 1.6;
 }
 
-/* ── 15. SERVICES (Дополнительно) — pine-dark bg ────────────── */
+/* ── 15. SERVICES (Дополнительно) — фото-фон с overlay ─────── */
 #services {
-  background: var(--color-pine-dark);
+  position: relative;
+  background: var(--color-ink);
+  background-image: url("сервисы.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+#services::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(12,21,25,.65);
+  z-index: 0;
+}
+#services > * { position: relative; z-index: 1; }
 
-#services .section-header .eyebrow { color: rgba(255,255,255,.4); }
+#services .section-header .eyebrow { color: rgba(255,255,255,.45); }
 #services .section-header h2       { color: #fff; }
-#services .section-header__desc    { color: rgba(255,255,255,.6); }
+#services .section-header__desc    { color: rgba(255,255,255,.65); }
 
 #services .included-grid {
   display: grid;
@@ -727,14 +760,15 @@ address { font-style: normal; }
 }
 
 #services .included-item {
-  background: rgba(255,255,255,.06);
+  background: rgba(12,21,25,.6);
   border: 1px solid rgba(255,255,255,.1);
   border-radius: var(--r-lg);
   padding: 1.75rem;
+  backdrop-filter: blur(6px);
   transition: background var(--t), transform var(--t);
 }
 #services .included-item:hover {
-  background: rgba(255,255,255,.1);
+  background: rgba(12,21,25,.8);
   transform: translateY(-2px);
 }
 #services .included-item h3 {

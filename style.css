@@ -24,7 +24,7 @@
   --font-ui:      "DM Sans", system-ui, sans-serif;
 
   /* Section rhythm */
-  --section-py: clamp(4rem, 8vw, 7rem);
+  --section-py: clamp(5rem, 10vw, 9rem);
 
   /* Layout */
   --container-max: 1100px;
@@ -582,6 +582,7 @@ address { font-style: normal; }
 /* ── 12. GEAR (Снасти) — фото-фон с тёмным overlay ─────────── */
 #gear {
   position: relative;
+  min-height: 600px;
   background-color: var(--color-ink);
   background-image: url("lake-bg.jpg");
   background-size: cover;
@@ -733,6 +734,7 @@ address { font-style: normal; }
 /* ── 15. SERVICES (Дополнительно) — фото-фон с overlay ─────── */
 #services {
   position: relative;
+  min-height: 600px;
   background-color: var(--color-ink);
   background-image: url("images/services.jpg");
   background-size: cover;
@@ -918,6 +920,9 @@ address { font-style: normal; }
 /* ── 19. MAINTENANCE ────────────────────────────────────────── */
 #maintenance {
   position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
   background-color: var(--color-ink);
   background-image: url("images/maintenance-bg.jpg");
   background-size: cover;

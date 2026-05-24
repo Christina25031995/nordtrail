@@ -24,7 +24,7 @@
   --font-ui:      "DM Sans", system-ui, sans-serif;
 
   /* Section rhythm */
-  --section-py: clamp(5rem, 10vw, 9rem);
+  --section-py: clamp(4rem, 8vw, 7rem);
 
   /* Layout */
   --container-max: 1100px;

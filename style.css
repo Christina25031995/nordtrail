@@ -24,7 +24,7 @@
   --font-ui:      "DM Sans", system-ui, sans-serif;
 
   /* Section rhythm */
-  --section-py: clamp(2.5rem, 5vw, 4.5rem);
+  --section-py: clamp(4rem, 8vw, 7rem);
 
   /* Layout */
   --container-max: 1100px;
@@ -384,7 +384,7 @@ address { font-style: normal; }
 /* Section header (centered) */
 .section-header {
   text-align: center;
-  margin: 0 auto clamp(1.5rem, 3vw, 2.5rem);
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
 }
 .section-header .eyebrow { margin-bottom: .75rem; }
 
@@ -916,44 +916,49 @@ address { font-style: normal; }
 }
 
 /* ── 19. MAINTENANCE ────────────────────────────────────────── */
-/* section--surface → pebble */
-
-.maintenance-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4px;
-  height: 70vh;
-  min-height: 480px;
-  max-height: 720px;
-  border-radius: var(--r-lg);
-  overflow: hidden;
+#maintenance {
+  position: relative;
+  background-color: var(--color-ink);
+  background-image: url("images/maintenance-bg.jpg");
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
 }
-
-.maintenance-item {
-  overflow: hidden;
-  height: 100%;
+#maintenance::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10,14,18,.62);
+  z-index: 0;
 }
-.maintenance-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform .6s ease;
-}
-.maintenance-item:hover img { transform: scale(1.04); }
+#maintenance .container   { position: relative; z-index: 1; }
+#maintenance .eyebrow     { color: rgba(255,255,255,.45); }
+#maintenance .section-header h2   { color: #fff; }
+#maintenance .section-header__desc { color: rgba(255,255,255,.65); }
 
-@media (max-width: 640px) {
-  .maintenance-grid {
-    grid-template-columns: 1fr;
-    height: auto;
-    min-height: unset;
-    max-height: unset;
-    gap: .5rem;
-    border-radius: var(--r-md);
-  }
-  .maintenance-item {
-    aspect-ratio: 4/3;
-    height: auto;
-  }
+.maintenance-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .75rem 2.5rem;
+  margin-top: 2rem;
+}
+.maintenance-features li {
+  font-size: .9375rem;
+  font-weight: 500;
+  color: rgba(255,255,255,.75);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.maintenance-features li::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-boat);
+  flex-shrink: 0;
 }
 
 /* ── 20. MAP ────────────────────────────────────────────────── */

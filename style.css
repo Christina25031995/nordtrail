@@ -582,12 +582,16 @@ address { font-style: normal; }
 /* ── 12. GEAR (Снасти) — фото-фон с тёмным overlay ─────────── */
 #gear {
   position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
   background-color: var(--color-ink);
   background-image: url("lake-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+#gear > .container { width: 100%; }
 #gear::before {
   content: "";
   position: absolute;
@@ -733,12 +737,16 @@ address { font-style: normal; }
 /* ── 15. SERVICES (Дополнительно) — фото-фон с overlay ─────── */
 #services {
   position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
   background-color: var(--color-ink);
   background-image: url("images/services.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
+#services > .container { width: 100%; }
 #services::before {
   content: "";
   position: absolute;
@@ -918,6 +926,9 @@ address { font-style: normal; }
 /* ── 19. MAINTENANCE ────────────────────────────────────────── */
 #maintenance {
   position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
   background-color: var(--color-ink);
   background-image: url("images/maintenance-bg.jpg");
   background-size: cover;

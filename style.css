@@ -1916,8 +1916,7 @@ border-radius: 4px;
 /* #gear photo background is set by #gear rule below */
 #gear {
   position: relative;
-  background-image: url("images/lake-bg.jpg");
-  background-size: cover;
+  background-image: url("./images/lake-bg.jpg");  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }

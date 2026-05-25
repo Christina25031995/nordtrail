@@ -65,7 +65,7 @@
       />        <div class="hero__scrim"></div>
         <div class="hero__horizon" aria-hidden="true"></div>
       </div>
-    </div>
+
       <div class="hero__inner">
         <div class="hero__content">
           <header class="hero__header">
@@ -75,21 +75,21 @@
               без залога<br />
             </h1>          </header>
 
-          <p class="hero__lead">Дистанционный мотор 20&nbsp;л.с., эхолот, бензин</p>
-
-          <div class="hero__inline-stats">
-            <span>Без залога</span>
-            <span class="hero__inline-dot">·</span>
-            <span>Бензин включён</span>
-            <span class="hero__inline-dot">·</span>
-            <span>Эхолот включён</span>
-            <span class="hero__inline-dot">·</span>
-            <span>В день обращения</span>
-          </div>
+            <p class="hero__lead">
+              Аренда алюминиевой лодки 5 м с эхолотом · мотор 20 л.с.
+            </p>
+            
+            <p class="hero__location">
+              10 минут от Мурманского шоссе — удобный подъезд без грунтовок           </p>
+              <div class="hero__inline-stats">
+                <span>Без залога</span>
+                <span>Бензин включён</span>
+                <span>Выход в день обращения</span>
+              </div>
 
           <div class="hero__actions">
-            <a class="btn btn--primary hero__btn" href="#contact">Забронировать лодку</a>
-            <a class="btn btn--ghost-light hero__btn hero__btn--secondary" href="#included">Что входит в аренду</a>
+            <a class="btn btn--primary hero__btn" href="#contact">Забронировать лодку сегодня</a>
+            <a class="btn btn--ghost-light hero__btn hero__btn--secondary" href="#included">Проверить свободные даты</a>
           </div>
         </div>
 
@@ -101,9 +101,9 @@
   <div class="container">
 
     <header class="fleet-header">
-      <p class="eyebrow">Каталог</p>
-      <h2 id="fleet-title">Лодки — без сюрпризов при выдаче</h2>
-      <p class="fleet-header__desc">Алюминий, 5&nbsp;метров, дистанционный мотор 20&nbsp;л.с. Размещены на базе отдыха у удобного пирса.</p>
+      <p class="eyebrow">Выбор лодки</p>
+      <h2 id="fleet-title">Выберите лодку за 10 секунд</h2>
+      <p class="fleet-header__desc">Размещены на базе отдыха у удобного пирса и готовы к выходу на воду уже сегодня.</p>
     </header>
 
     <article class="fleet-item">      <div class="fleet-item__media">
@@ -137,8 +137,13 @@
           <div class="fleet-item__name">
             <h3>Лодка №1</h3>
             <p>Дистанционный мотор · 20 л.с. · эхолот</p>
+    
+          </div>
+          <div class="fleet-item__availability">
+            <span>Доступна сегодня — ближайший выход 14:00</span>
           </div>
           <a class="btn btn--primary" href="#contact">Забронировать — от 3 500 ₽/день</a>
+          
         </div>
       </div>
     </article>
@@ -175,6 +180,9 @@
             <h3>Лодка №2</h3>
             <p>Дистанционный мотор · 20 л.с. · эхолот</p>
           </div>
+          <div class="fleet-item__availability">
+            <span>Доступна завтра — ближайший выход 06:00</span>
+          </div>
           <a class="btn btn--primary" href="#contact">Забронировать — от 3 500 ₽/день</a>
         </div>
       </div>
@@ -182,8 +190,30 @@
 
   </div>
 </section>
+<!--3. Maintenance / Сервис с фото-фоном -->
+<section class="section" id="maintenance" aria-labelledby="maintenance-title">
+  <div class="container">
 
-    <!-- 3. Scenarios -->
+    <header class="section-header">
+      <p class="eyebrow">Сервис и качество</p>
+      <h2 id="maintenance-title">Каждая лодка проверяется перед выходом на воду</h2>
+      <p class="section-header__desc">
+        Каждая лодка проходит через нашу мастерскую: проверка, ремонт и обновление оборудования перед выходом на воду.
+      </p>
+    </header>
+
+    <ul class="maintenance-features">
+      <li>Моторы проверяем перед каждым сезоном</li>
+      <li>Корпус без вмятин и протечек</li>
+      <li>Эхолот настроен и готов к работе</li>
+      <li>Лодки 2025 года</li>
+      <li>Нет случайных лодок — только наш собственный флот</li>
+    </ul>
+
+  </div>
+</section>
+
+    <!-- 4. Scenarios -->
     <section class="section section--surface" id="scenarios" aria-labelledby="scenarios-title">
       <div class="container">
         <header class="section-header">
@@ -195,46 +225,149 @@
         <div class="scenario-grid">
           <article class="scenario-card">
             <span class="scenario-card__icon" aria-hidden="true">01</span>
+          
             <h3>Рыбалка</h3>
-            <p>Готовые точки на карте и близость к рыболовным местам. Эхолот уже на борту — не нужно искать глубину вслепую.</p>
+          
+            <p>
+              Проверенные точки рыбалки на Ладоге — уже в эхолоте и карте
+            </p>
+          
             <ul class="scenario-card__tags">
-              <li>Эхолот</li>
-              <li>Точки на карте</li>
+              <li>Эхолот уже на борту</li>
+              <li>Проверенные точки</li>
             </ul>
           </article>
 
           <article class="scenario-card">
             <span class="scenario-card__icon" aria-hidden="true">02</span>
+          
             <h3>Компания друзей</h3>
-            <p>До 4 человек на лодке 5&nbsp;метров. Бензин и спасжилеты включены — не собираете снаряжение по частям.</p>
+          
+            <p>
+              Выход на воду до 4 человек на одной лодке — без подготовки и лишних сборов
+            </p>
+          
             <ul class="scenario-card__tags">
-              <li>До 4 чел.</li>
+              <li>До 4 человек</li>
               <li>Бензин включён</li>
             </ul>
           </article>
 
           <article class="scenario-card">
             <span class="scenario-card__icon" aria-hidden="true">03</span>
-            <h3>Пара</h3>
-            <p>Спокойный выход с пирса без неудобного спуска. Можно доехать до крепости Орешек или использовать лодку как транспорт до островов.</p>
+          
+            <h3>Прогулка вдвоём</h3>
+          
+            <p>
+              Спокойный выход на воду для двоих — острова, Орешек и тихие маршруты Ладоги
+            </p>
+          
             <ul class="scenario-card__tags">
-              <li>Спуск с пирса</li>
-              <li>Острова</li>
+              <li>Спуск с удобного пирса</li>
+              <li>Маршруты к островам</li>
             </ul>
           </article>
 
           <article class="scenario-card">
             <span class="scenario-card__icon" aria-hidden="true">04</span>
-            <h3>Новичок или опытный</h3>
-            <p>Права на мотор не нужны. Новые алюминиевые лодки без протечек и деревянных сидений — не «убитый» прокатный флот.</p>
+          
+            <h3>Первый раз на лодке</h3>
+          
+            <p>
+              Простое управление и понятный выход на воду — опыт не требуется
+            </p>
+          
             <ul class="scenario-card__tags">
-              <li>Без прав</li>
-              <li>Лодки 2025</li>
+              <li>Права не нужны</li>
+              <li>Инструктаж перед выходом</li>
             </ul>
           </article>
         </div>
       </div>
     </section>
+
+    <!-- 5. Included -->
+    <section class="section section--dark" id="included" aria-labelledby="included-title">
+      <div class="container">
+        <header class="section-header">
+          <p class="eyebrow">Состав аренды</p>
+          <h2 id="included-title">Всё необходимое уже на борту — без доплат на месте</h2>
+          <p class="section-header__desc section-header__desc--muted">То, за что обычно доплачивают отдельно или не включают вовсе.</p>
+        </header>
+
+        <div class="included-grid">
+          <article class="included-item">
+            <div class="included-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>
+            </div>
+            <h3>Эхолот</h3>
+            <p>Уже установлен и настроен. Не нужно арендовать или покупать отдельно для рыбалки.</p>
+          </article>
+          <article class="included-item">
+            <div class="included-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 14h16l-2 6H6l-2-6z"/><path d="M6 14l2-8h8l2 8"/></svg>
+            </div>
+            <h3>Бензин</h3>
+            <p>Включён в стоимость аренды  — без доплат после поездки.</p>
+          </article>
+          <article class="included-item">
+            <div class="included-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l7 4v6c0 4-3 7-7 8-4-1-7-4-7-8V7l7-4z"/></svg>
+            </div>
+            <h3>Спасжилеты</h3>
+            <p>Выдаются вместе с лодкой — не нужно привозить своё.</p>
+          </article>
+          <article class="included-item">
+            <div class="included-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16v12H4z"/><path d="M8 10h3M13 10h3M8 14h8"/></svg>
+            </div>
+            <h3>Готовые точки на карте</h3>
+            <p>Не нужно долго искать, где рыбачат — точки уже отмечены.</p>
+          </article>
+          <article class="included-item">
+            <div class="included-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20h16"/><path d="M8 20V8l4-4 4 4v12"/></svg>
+            </div>
+            <h3>Удобный спуск с пирса</h3>
+            <p>Без неудобного берегового спуска — лодка у пирса на базе отдыха.</p>
+          </article>
+          <article class="included-item">
+            <div class="included-item__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h18"/><path d="M12 3v18"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3>Без залога</h3>
+            <p>Аренда без залоговой суммы при выдаче.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+ <!-- Trust: повторные клиенты -->
+ <section class="section section--trust" id="trust" aria-labelledby="trust-title">
+  <div class="container">
+    <div class="trust-panel">
+      <header class="trust-panel__header">
+        <p class="eyebrow">Повторные клиенты</p>
+        <h2 id="trust-title"><span class="trust-stat">81% </span>гостей берут лодку повторно</h2>            <p class="trust-panel__subtitle">Лодки берут не один раз — а для регулярных выходов на Ладогу</p>
+      </header>
+
+      <p class="trust-panel__lead">Гости возвращаются, когда каждый выход предсказуем: состояние лодок стабильное, нет лотереи качества, условия аренды одинаковые от раза к разу.</p>
+
+      <ul class="trust-list">
+        <li>Одинаковые лодки без разброса по состоянию</li>
+        <li>Стабильная комплектация каждый выезд</li>
+        <li>Без залога и скрытых доплат</li>
+        <li>Быстрый повторный выход на воду</li>
+        <li>Знакомые точки рыбалки</li>
+        <li>Предсказуемый процесс аренды</li>
+      </ul>
+
+      <a class="btn btn--secondary trust-panel__cta" href="#contact">Забронировать лодку</a>
+    </div>
+  </div>
+</section>
+
+
 
 <!-- 7. Fishing Gear -->
 <section class="section" id="gear" aria-labelledby="gear-title">
@@ -286,61 +419,7 @@
       </div>
     </section>
 
-    <!-- 4. Included -->
-    <section class="section section--dark" id="included" aria-labelledby="included-title">
-      <div class="container">
-        <header class="section-header">
-          <p class="eyebrow">Состав аренды</p>
-          <h2 id="included-title">Всё необходимое уже на борту — без доплат на месте</h2>
-          <p class="section-header__desc section-header__desc--muted">То, за что обычно доплачивают отдельно или не включают вовсе.</p>
-        </header>
-
-        <div class="included-grid">
-          <article class="included-item">
-            <div class="included-item__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>
-            </div>
-            <h3>Эхолот</h3>
-            <p>Входит в аренду. Не нужно арендовать или покупать отдельно для рыбалки.</p>
-          </article>
-          <article class="included-item">
-            <div class="included-item__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 14h16l-2 6H6l-2-6z"/><path d="M6 14l2-8h8l2 8"/></svg>
-            </div>
-            <h3>Бензин</h3>
-            <p>Топливо включено — без сюрпризов на кассе после поездки.</p>
-          </article>
-          <article class="included-item">
-            <div class="included-item__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l7 4v6c0 4-3 7-7 8-4-1-7-4-7-8V7l7-4z"/></svg>
-            </div>
-            <h3>Спасжилеты</h3>
-            <p>Выдаются вместе с лодкой — не нужно привозить своё.</p>
-          </article>
-          <article class="included-item">
-            <div class="included-item__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16v12H4z"/><path d="M8 10h3M13 10h3M8 14h8"/></svg>
-            </div>
-            <h3>Готовые точки на карте</h3>
-            <p>Не нужно долго искать, где рыбачат — точки уже отмечены.</p>
-          </article>
-          <article class="included-item">
-            <div class="included-item__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20h16"/><path d="M8 20V8l4-4 4 4v12"/></svg>
-            </div>
-            <h3>Удобный спуск с пирса</h3>
-            <p>Без неудобного берегового спуска — лодка у пирса на базе отдыха.</p>
-          </article>
-          <article class="included-item">
-            <div class="included-item__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h18"/><path d="M12 3v18"/><circle cx="12" cy="12" r="3"/></svg>
-            </div>
-            <h3>Без залога</h3>
-            <p>Аренда без залоговой суммы при выдаче.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+    
 
     <!-- 5. Process -->
      
@@ -392,7 +471,7 @@
   <div class="container">
     <header class="section-header">
       <p class="eyebrow">Дополнительно</p>
-      <h2 id="services-title">Баня, бассейн и все для отдыха</h2>
+      <h2 id="services-title">«Отдых на берегу после рыбалки</h2>
       <p class="section-header__desc">
         Можно добавить к аренде лодки: отдых на берегу, мангал, наваристую уху, бассейн или купель.
       </p>
@@ -423,31 +502,7 @@
     </div>
   </div>
 </section>
-    <!-- Trust: повторные клиенты -->
-    <section class="section section--trust" id="trust" aria-labelledby="trust-title">
-      <div class="container">
-        <div class="trust-panel">
-          <header class="trust-panel__header">
-            <p class="eyebrow">Повторные клиенты</p>
-            <h2 id="trust-title"><span class="trust-stat">81%</span> гостей возвращаются снова</h2>            <p class="trust-panel__subtitle">Лодки берут не один раз — а для регулярных выходов на Ладогу</p>
-          </header>
-
-          <p class="trust-panel__lead">Гости возвращаются, когда каждый выход предсказуем: состояние лодок стабильное, нет лотереи качества, условия аренды одинаковые от раза к разу.</p>
-
-          <ul class="trust-list">
-            <li>Одинаковые лодки без разброса по состоянию</li>
-            <li>Стабильная комплектация каждый выезд</li>
-            <li>Без залога и скрытых доплат</li>
-            <li>Быстрый повторный выход на воду</li>
-            <li>Знакомые точки рыбалки</li>
-            <li>Предсказуемый процесс аренды</li>
-          </ul>
-
-          <a class="btn btn--secondary trust-panel__cta" href="#contact">Забронировать лодку</a>
-        </div>
-      </div>
-    </section>
-
+   
     <!-- 7. Gallery -->
     <section class="section section--surface" id="gallery" aria-labelledby="gallery-title">
       <div class="container">
@@ -529,27 +584,6 @@
     </section>
 
        <!-- 2. Fleet -->
-<!-- Maintenance / Сервис с фото-фоном -->
-<section class="section" id="maintenance" aria-labelledby="maintenance-title">
-  <div class="container">
-
-    <header class="section-header">
-      <p class="eyebrow">Сервис и качество</p>
-      <h2 id="maintenance-title">Мы сами обслуживаем и улучшаем лодки</h2>
-      <p class="section-header__desc">
-        Каждая лодка проходит через нашу мастерскую: проверка, ремонт и обновление оборудования перед выходом на воду.
-      </p>
-    </header>
-
-    <ul class="maintenance-features">
-      <li>Моторы проверяем перед каждым сезоном</li>
-      <li>Корпус без вмятин и протечек</li>
-      <li>Эхолот настроен и готов к работе</li>
-      <li>Лодки 2025 года</li>
-    </ul>
-
-  </div>
-</section>
 
 <!-- Map -->
 <section class="section section--surface" id="map" aria-labelledby="map-title">
@@ -558,7 +592,7 @@
       <p class="eyebrow">Локация</p>
       <h2 id="map-title">Где находятся лодки</h2>
       <p class="section-header__desc">
-        Базы отдыха на Ладоге · удобный пирс · быстрый выход на воду
+        10 минут от Мурманского шоссе · · удобный подъезд без грунтовки
       </p>
     </header>
 
@@ -574,7 +608,7 @@
     </div>
     <div class="map-actions">
       <a href="https://yandex.ru/maps/?rtext=~59.9053%2C31.2044&rtt=auto" target="_blank" rel="noopener" class="btn btn--outline map-route-btn">Построить маршрут</a>
-      <p class="map-address">Новоладожский канал, 27, дер. Назия, Кировский р-н, Ленинградская обл.</p>
+      <p class="map-address">Новоладожский канал, Кировский район</p>
     </div>
   </div>
 </section>

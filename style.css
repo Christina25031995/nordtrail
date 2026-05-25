@@ -1913,13 +1913,7 @@ border-radius: 4px;
   transform: translateY(-3px);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.10);
 }
-#gear.section--surface {
-  background-color: var(--color-linen); /* если нужен базовый цвет */
-  background-image: url("lake-bg.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+/* #gear photo background is set by #gear rule below */
 #gear {
   position: relative;
   background-image: url("images/lake-bg.jpg");
@@ -2521,6 +2515,7 @@ border-radius: 4px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: 55vh;
 }
 #gear::before {
   content: "";
@@ -2546,6 +2541,7 @@ border-radius: 4px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: 55vh;
 }
 #services::before {
   content: "";
@@ -2564,7 +2560,7 @@ border-radius: 4px;
 #services .included-item p { color: rgba(255,255,255,0.7); }
 
 /* 5. Секция мастерской — фото-фон */
-#maintenance { position: relative; background-image: url("images/maintenance-bg.jpg"); background-size: cover; background-position: center; background-repeat: no-repeat; }
+#maintenance { position: relative; background-image: url("images/maintenance-bg.jpg"); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 55vh; }
 #maintenance::before { content: ""; position: absolute; inset: 0; background: rgba(12,21,25,0.62); z-index: 0; }
 #maintenance > * { position: relative; z-index: 1; }
 #maintenance h2 { color: #fff; }

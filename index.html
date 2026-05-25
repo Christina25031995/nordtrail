@@ -49,28 +49,31 @@
   </header>
 
   <main id="main">
-
     <!-- 1. Hero -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__backdrop" aria-hidden="true">
+        <!--
+       <img
+  class="hero__image"
+  src="./hero-boat.jpg"
+  alt="Алюминиевая лодка у пирса на Ладоге"
+/>
+        -->
         <img
-          class="hero__image"
-          src="./hero.jpg"
-          alt="Алюминиевая лодка у пирса на Ладоге"
-        />
-        <div class="hero__scrim"></div>
+        class="hero__image"
+        src="./hero.jpg"        alt="Алюминиевая лодка у пирса на Ладоге"
+      />        <div class="hero__scrim"></div>
         <div class="hero__horizon" aria-hidden="true"></div>
       </div>
-
+    </div>
       <div class="hero__inner">
         <div class="hero__content">
           <header class="hero__header">
             <p class="hero__eyebrow">Аренда алюминиевых лодок · Ладога</p>
             <h1 class="hero__title" id="hero-title">
               Выход на воду —<br />
-              без залога
-            </h1>
-          </header>
+              без залога<br />
+            </h1>          </header>
 
           <p class="hero__lead">Дистанционный мотор 20&nbsp;л.с., эхолот, бензин</p>
 
@@ -86,107 +89,106 @@
 
           <div class="hero__actions">
             <a class="btn btn--primary hero__btn" href="#contact">Забронировать лодку</a>
-            <a class="btn btn--ghost-light hero__btn" href="#included">Что входит в аренду</a>
+            <a class="btn btn--ghost-light hero__btn hero__btn--secondary" href="#included">Что входит в аренду</a>
           </div>
         </div>
+
+
+   
+    </div>
+</section>
+<section class="section fleet-section" id="fleet" aria-labelledby="fleet-title">
+  <div class="container">
+
+    <header class="fleet-header">
+      <p class="eyebrow">Каталог</p>
+      <h2 id="fleet-title"><span class="no-wrap">Лодки — без сюрпризов при выдаче</span></h2>
+      <p class="fleet-header__desc">Алюминий, 5&nbsp;метров, дистанционный мотор 20&nbsp;л.с. Размещены на базе отдыха у удобного пирса.</p>
+    </header>
+
+    <article class="fleet-item">      <div class="fleet-item__media">
+        <img src="./boat-1.jpg" alt="Лодка №1 на Ладоге" loading="lazy">
+        <span class="fleet-item__index">01</span>
       </div>
-    </section>
-
-    <!-- 2. Fleet -->
-    <section class="section fleet-section" id="fleet" aria-labelledby="fleet-title">
-      <div class="container">
-
-        <header class="fleet-header">
-          <p class="eyebrow">Каталог</p>
-          <h2 id="fleet-title">Лодки — без сюрпризов при выдаче</h2>
-          <p class="fleet-header__desc">Алюминий, 5&nbsp;метров, дистанционный мотор 20&nbsp;л.с. Размещены на базе отдыха у удобного пирса.</p>
-        </header>
-
-        <article class="fleet-item">
-          <div class="fleet-item__media">
-            <img src="./boat-1.jpg" alt="Лодка №1 на Ладоге" loading="lazy">
-            <span class="fleet-item__index">01</span>
+      <div class="fleet-item__body">
+        <div class="fleet-item__specs">
+          <div class="fleet-spec">
+            <span class="fleet-spec__label">Длина</span>
+            <strong class="fleet-spec__value">5 м</strong>
           </div>
-          <div class="fleet-item__body">
-            <div class="fleet-item__specs">
-              <div class="fleet-spec">
-                <span class="fleet-spec__label">Длина</span>
-                <strong class="fleet-spec__value">5 м</strong>
-              </div>
-              <div class="fleet-spec">
-                <span class="fleet-spec__label">Экипаж</span>
-                <strong class="fleet-spec__value">до 4</strong>
-              </div>
-              <div class="fleet-spec">
-                <span class="fleet-spec__label">Мотор</span>
-                <strong class="fleet-spec__value">20 л.с.</strong>
-              </div>
-              <div class="fleet-spec">
-                <span class="fleet-spec__label">Корпус</span>
-                <strong class="fleet-spec__value">Алюминий</strong>
-              </div>
-              <div class="fleet-spec">
-                <span class="fleet-spec__label">Год</span>
-                <strong class="fleet-spec__value">2025</strong>
-              </div>
-            </div>
-            <div class="fleet-item__cta">
-              <div class="fleet-item__name">
-                <h3>Лодка №1</h3>
-                <p>Дистанционный мотор · 20 л.с. · эхолот</p>
-              </div>
-              <a class="btn btn--primary" href="#contact">Забронировать — от 3 500 ₽/день</a>
-            </div>
+          <div class="fleet-spec">
+            <span class="fleet-spec__label">Экипаж</span>
+            <strong class="fleet-spec__value">до 4</strong>
           </div>
-        </article>
-
-        <article class="fleet-item">
-          <div class="fleet-item__media">
-            <img src="./boat-2.jpg" alt="Лодка №2 на Ладоге" loading="lazy">
-            <span class="fleet-item__index">02</span>
+          <div class="fleet-spec">
+            <span class="fleet-spec__label">Мотор</span>
+            <strong class="fleet-spec__value">20 л.с.</strong>
           </div>
-          <div class="fleet-item__body">
-            <div class="fleet-item__specs">
-              <div class="fleet-spec">
-                <span class="fleet-spec__label">Длина</span>
-                <strong class="fleet-spec__value">5 м</strong>
-              </div>
-              <div class="fleet-spec">
-                <span class="fleet-spec__label">Экипаж</span>
-                <strong class="fleet-spec__value">до 4</strong>
-              </div>
-              <div class="fleet-spec">
-                <span class="fleet-spec__label">Мотор</span>
-                <strong class="fleet-spec__value">20 л.с.</strong>
-              </div>
-              <div class="fleet-spec">
-                <span class="fleet-spec__label">Корпус</span>
-                <strong class="fleet-spec__value">Алюминий</strong>
-              </div>
-              <div class="fleet-spec">
-                <span class="fleet-spec__label">Год</span>
-                <strong class="fleet-spec__value">2025</strong>
-              </div>
-            </div>
-            <div class="fleet-item__cta">
-              <div class="fleet-item__name">
-                <h3>Лодка №2</h3>
-                <p>Дистанционный мотор · 20 л.с. · эхолот</p>
-              </div>
-              <a class="btn btn--primary" href="#contact">Забронировать — от 3 500 ₽/день</a>
-            </div>
+          <div class="fleet-spec">
+            <span class="fleet-spec__label">Корпус</span>
+            <strong class="fleet-spec__value">Алюминий</strong>
           </div>
-        </article>
-
+          <div class="fleet-spec">
+            <span class="fleet-spec__label">Год</span>
+            <strong class="fleet-spec__value">2025</strong>
+          </div>
+        </div>
+        <div class="fleet-item__cta">
+          <div class="fleet-item__name">
+            <h3>Лодка №1</h3>
+            <p>Дистанционный мотор · 20 л.с. · эхолот</p>
+          </div>
+          <a class="btn btn--primary" href="#contact">Забронировать — от 3 500 ₽/день</a>
+        </div>
       </div>
-    </section>
+    </article>
+
+    <article class="fleet-item">    <div class="fleet-item__media">
+        <img src="./boat-2.jpg" alt="Лодка №2 на Ладоге" loading="lazy">
+        <span class="fleet-item__index">02</span>
+      </div>
+      <div class="fleet-item__body">
+        <div class="fleet-item__specs">
+          <div class="fleet-spec">
+            <span class="fleet-spec__label">Длина</span>
+            <strong class="fleet-spec__value">5 м</strong>
+          </div>
+          <div class="fleet-spec">
+            <span class="fleet-spec__label">Экипаж</span>
+            <strong class="fleet-spec__value">до 4</strong>
+          </div>
+          <div class="fleet-spec">
+            <span class="fleet-spec__label">Мотор</span>
+            <strong class="fleet-spec__value">20 л.с.</strong>
+          </div>
+          <div class="fleet-spec">
+            <span class="fleet-spec__label">Корпус</span>
+            <strong class="fleet-spec__value">Алюминий</strong>
+          </div>
+          <div class="fleet-spec">
+            <span class="fleet-spec__label">Год</span>
+            <strong class="fleet-spec__value">2025</strong>
+          </div>
+        </div>
+        <div class="fleet-item__cta">
+          <div class="fleet-item__name">
+            <h3>Лодка №2</h3>
+            <p>Дистанционный мотор · 20 л.с. · эхолот</p>
+          </div>
+          <a class="btn btn--primary" href="#contact">Забронировать — от 3 500 ₽/день</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
 
     <!-- 3. Scenarios -->
     <section class="section section--surface" id="scenarios" aria-labelledby="scenarios-title">
       <div class="container">
         <header class="section-header">
           <p class="eyebrow">Сценарии</p>
-          <h2 id="scenarios-title">Выберите, как поедете на воду</h2>
+          <h2 id="scenarios-title"><span class="no-wrap">Выберите, как поедете на воду</span></h2>
           <p class="section-header__desc">Один формат аренды — разные задачи: рыбалка, поездка с друзьями, выход вдвоём или первый раз на моторной лодке.</p>
         </header>
 
@@ -234,40 +236,46 @@
       </div>
     </section>
 
-    <!-- 4. Fishing Gear -->
-    <section class="section" id="gear" aria-labelledby="gear-title">
-      <div class="container">
-        <header class="section-header">
-          <p class="eyebrow">Снасти и рыбалка</p>
-          <h2 id="gear-title">Удочки, спиннинги и приманки</h2>
-          <p class="section-header__desc">
-            Всё необходимое для рыбалки на Ладоге — подберём снасти под условия и сезон.
-          </p>
-        </header>
+<!-- 7. Fishing Gear -->
+<section class="section section--surface" id="gear" aria-labelledby="gear-title">
+  <div class="container">
 
-        <div class="included-grid">
-          <article class="included-item">
-            <h3>Удочки</h3>
-            <p>Классические удочки для спокойной рыбалки с берега и лодки.</p>
-          </article>
-          <article class="included-item">
-            <h3>Спиннинги</h3>
-            <p>Снасти для ловли щуки, судака и окуня в активной рыбалке.</p>
-          </article>
-          <article class="included-item">
-            <h3>Катушки и оснастка</h3>
-            <p>Готовые комплекты: катушки, леска и базовая оснастка.</p>
-          </article>
-          <article class="included-item">
-            <h3>Приманки</h3>
-            <p>Воблеры, блёсны и силикон под разные условия ловли.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+    <header class="section-header">
+      <p class="eyebrow">Снасти и рыбалка</p>
+      <h2 id="gear-title"><span class="no-wrap">Удочки, спиннинги и приманки</span></h2>
+      <p class="section-header__desc">
+        Всё необходимое для рыбалки на Ладоге — подберём снасти под условия и сезон.
+      </p>
+    </header>
 
-    <!-- 5. Included -->
-    <section class="section section--dark" id="included" aria-labelledby="included-title">
+    <div class="included-grid">
+
+      <article class="included-item">
+        <h3>Удочки</h3>
+        <p>Классические удочки для спокойной рыбалки с берега и лодки.</p>
+      </article>
+
+      <article class="included-item">
+        <h3>Спиннинги</h3>
+        <p>Снасти для ловли щуки, судака и окуня в активной рыбалке.</p>
+      </article>
+
+      <article class="included-item">
+        <h3>Катушки и оснастка</h3>
+        <p>Готовые комплекты: катушки, леска и базовая оснастка.</p>
+      </article>
+
+      <article class="included-item">
+        <h3>Приманки</h3>
+        <p>Воблеры, блёсны и силикон под разные условия ловли.</p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+    <!-- 4. Included -->
+    <section class="section section--ink" id="included" aria-labelledby="included-title">
       <div class="container">
         <header class="section-header">
           <p class="eyebrow">Состав аренды</p>
@@ -322,12 +330,13 @@
       </div>
     </section>
 
-    <!-- 6. Process -->
+    <!-- 5. Process -->
+     
     <section class="section section--surface" id="process" aria-labelledby="process-title">
       <div class="container">
         <header class="section-header">
           <p class="eyebrow">Как это работает</p>
-          <h2 id="process-title">От заявки до воды — без долгого ожидания</h2>
+          <h2 id="process-title"><span class="no-wrap">От заявки до воды — без долгого ожидания</span></h2>
           <p class="section-header__desc">Можно получить лодку в день обращения. Без скрытых доплат и отдельного сбора залога.</p>
         </header>
 
@@ -346,6 +355,7 @@
               <p>Лодки на базах отдыха. Краткий инструктаж, спасжилеты, эхолот и бензин уже с вами.</p>
             </div>
           </li>
+
           <li class="process-step">
             <span class="process-step__num">3</span>
             <div>
@@ -364,46 +374,50 @@
       </div>
     </section>
 
-    <!-- 7. Services -->
-    <section class="section" id="services" aria-labelledby="services-title">
-      <div class="container">
-        <header class="section-header">
-          <p class="eyebrow">Дополнительно</p>
-          <h2 id="services-title">Баня, бассейн и всё для отдыха</h2>
-          <p class="section-header__desc">
-            Можно добавить к аренде лодки: отдых на берегу, мангал, наваристую уху, бассейн или купель.
-          </p>
-        </header>
+   
+<!-- 6. Services -->
+<section class="section section--surface" id="services" aria-labelledby="services-title">
+  <div class="container">
+    <header class="section-header">
+      <p class="eyebrow">Дополнительно</p>
+      <h2 id="services-title">Баня, бассейн и все для отдыха</h2>
+      <p class="section-header__desc">
+        Можно добавить к аренде лодки: отдых на берегу, мангал, наваристую уху, бассейн или купель.
+      </p>
+    </header>
 
-        <div class="included-grid">
-          <article class="included-item">
-            <h3>Баня на берегу</h3>
-            <p>После рыбалки — тёплая баня рядом с пирсом.</p>
-          </article>
-          <article class="included-item">
-            <h3>Бассейн</h3>
-            <p>Просторный тёплый бассейн.</p>
-          </article>
-          <article class="included-item">
-            <h3>Купели</h3>
-            <p>Ледяная и горячая купели прямо на улице.</p>
-          </article>
-          <article class="included-item">
-            <h3>Уха и мангал</h3>
-            <p>Наваристая уха по возвращении с рыбалки. Можно приготовить шашлык на мангале.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+    <div class="included-grid">
 
-    <!-- 8. Trust -->
+      <article class="included-item">
+        <h3>Баня на берегу</h3>
+        <p>После рыбалки — тёплая баня рядом с пирсом.</p>
+      </article>
+
+      <article class="included-item">
+        <h3>Бассейн</h3>
+        <p>Просторный теплый бассейн.</p>
+      </article>
+
+      <article class="included-item">
+        <h3>Купели</h3>
+        <p> Ледяная и горячая купели прямо на цлице </p>
+      </article>
+
+      <article class="included-item">
+        <h3>Наваристая уха по возвращении с рыбалки</h3>
+        <p>Можно приготовить шашлык на мангале.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+    <!-- Trust: повторные клиенты -->
     <section class="section section--trust" id="trust" aria-labelledby="trust-title">
       <div class="container">
         <div class="trust-panel">
           <header class="trust-panel__header">
             <p class="eyebrow">Повторные клиенты</p>
-            <h2 id="trust-title"><span class="trust-stat">81%</span> гостей возвращаются снова</h2>
-            <p class="trust-panel__subtitle">Лодки берут не один раз — а для регулярных выходов на Ладогу</p>
+            <h2 id="trust-title"><span class="trust-stat">81%</span> гостей возвращаются снова</h2>            <p class="trust-panel__subtitle">Лодки берут не один раз — а для регулярных выходов на Ладогу</p>
           </header>
 
           <p class="trust-panel__lead">Гости возвращаются, когда каждый выход предсказуем: состояние лодок стабильное, нет лотереи качества, условия аренды одинаковые от раза к разу.</p>
@@ -422,43 +436,51 @@
       </div>
     </section>
 
-    <!-- 9. Gallery -->
+    <!-- 7. Gallery -->
     <section class="section section--surface" id="gallery" aria-labelledby="gallery-title">
       <div class="container">
         <header class="section-header">
           <p class="eyebrow">Фото</p>
           <h2 id="gallery-title">Клиенты и лодки на Ладоге</h2>
+  
         </header>
 
         <div class="gallery-grid">
+
           <figure class="gallery-item">
-            <img src="./board-view.jpg" alt="Вид с лодки на Ладоге" loading="lazy">
+            <img src="./board-view.jpg" alt="Вид с лодки на Ладоге">
           </figure>
+        
           <figure class="gallery-item">
-            <img src="./fishfinder.jpg" alt="Рыбалка с эхолотом" loading="lazy">
+            <img src="./fishfinder.jpg" alt="Рыбалка с эхолотом">
           </figure>
+        
           <figure class="gallery-item">
-            <img src="./company.jpg" alt="Компания на лодке" loading="lazy">
+            <img src="./company.jpg" alt="Компания на лодке">
           </figure>
+        
           <figure class="gallery-item">
-            <img src="./pier.jpg" alt="Пирс и спуск" loading="lazy">
+            <img src="./pier.jpg" alt="Пирс и спуск">
           </figure>
+        
           <figure class="gallery-item">
-            <img src="./oreshek-route.jpg" alt="Маршрут к Орешку" loading="lazy">
+            <img src="./oreshek-route.jpg" alt="Маршрут к Орешку">
           </figure>
+        
           <figure class="gallery-item">
-            <img src="./islands-transfer.jpg" alt="Транспорт до островов" loading="lazy">
+            <img src="./islands-transfer.jpg" alt="Транспорт до островов">
           </figure>
+        
         </div>
-      </div>
+
     </section>
 
-    <!-- 10. FAQ -->
+    <!-- 8. FAQ -->
     <section class="section" id="faq" aria-labelledby="faq-title">
       <div class="container container--narrow">
         <header class="section-header">
           <p class="eyebrow">Вопросы</p>
-          <h2 id="faq-title">Что нужно знать</h2>
+          <h2 id="faq-title"> Что нужно знать</h2>
         </header>
 
         <div class="faq-list">
@@ -494,50 +516,52 @@
       </div>
     </section>
 
-    <!-- 11. Maintenance -->
-    <section class="section" id="maintenance" aria-labelledby="maintenance-title">
-      <div class="container">
-        <header class="section-header">
-          <p class="eyebrow">Сервис и качество</p>
-          <h2 id="maintenance-title">Мы сами обслуживаем и улучшаем лодки</h2>
-          <p class="section-header__desc">
-            Каждая лодка проходит через нашу мастерскую: проверка, ремонт и обновление оборудования перед выходом на воду.
-          </p>
-        </header>
-        <ul class="maintenance-features">
-          <li>Моторы проверяем перед каждым сезоном</li>
-          <li>Корпус без вмятин и протечек</li>
-          <li>Эхолот настроен и готов к работе</li>
-          <li>Лодки 2025 года</li>
-        </ul>
-      </div>
-    </section>
+       <!-- 2. Fleet -->
+<!-- Maintenance / Сервис с фото-фоном -->
+<section class="section" id="maintenance" aria-labelledby="maintenance-title">
+  <div class="container">
 
-    <!-- 12. Map -->
-    <section class="section section--surface" id="map" aria-labelledby="map-title">
-      <div class="container">
-        <header class="section-header">
-          <p class="eyebrow">Локация</p>
-          <h2 id="map-title">Где находятся лодки</h2>
-          <p class="section-header__desc">
-            Базы отдыха на Ладоге · удобный пирс · быстрый выход на воду
-          </p>
-        </header>
+    <header class="section-header">
+      <p class="eyebrow">Сервис и качество</p>
+      <h2 id="maintenance-title">Мы сами обслуживаем и улучшаем лодки</h2>
+      <p class="section-header__desc">
+        Каждая лодка проходит через нашу мастерскую: проверка, ремонт и обновление оборудования перед выходом на воду.
+      </p>
+    </header>
 
-        <div class="map-card">
-          <iframe
-            src="https://yandex.ru/map-widget/v1/?ll=31.496%2C60.789&z=13&l=map"
-            width="100%"
-            height="420"
-            frameborder="0"
-            allowfullscreen="true"
-            loading="lazy">
-          </iframe>
-        </div>
-      </div>
-    </section>
+    <ul class="maintenance-features">
+      <li>Моторы проверяем перед каждым сезоном</li>
+      <li>Корпус без вмятин и протечек</li>
+      <li>Эхолот настроен и готов к работе</li>
+      <li>Лодки 2025 года</li>
+    </ul>
 
-    <!-- 13. Contact CTA -->
+  </div>
+</section>
+
+    <!-- Map -->
+<section class="section section--surface" id="map" aria-labelledby="map-title">
+  <div class="container">
+    <header class="section-header">
+      <p class="eyebrow">Локация</p>
+      <h2 id="map-title">Где находятся лодки</h2>
+      <p class="section-header__desc">
+        Базы отдыха на Ладоге · удобный пирс · быстрый выход на воду
+      </p>
+    </header>
+
+    <div class="map-card">
+      <iframe
+        src="https://yandex.ru/map-widget/v1/?ll=31.496%2C60.789&z=13&l=map"
+        width="100%"
+        height="420"
+        frameborder="0"
+        allowfullscreen="true"
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
     <section class="section section--cta" id="contact" aria-labelledby="contact-title">
       <div class="container contact-layout">
         <div class="contact-main">
@@ -572,14 +596,13 @@
         </address>
       </div>
     </section>
-
   </main>
 
   <footer class="site-footer">
     <div class="container site-footer__inner">
       <p class="logo__text">Лодки на Ладоге</p>
-      <p class="site-footer__meta">Аренда алюминиевых лодок</p>
-      <a class="site-footer__top" href="#top">Наверх ↑</a>
+      <p class="site-footer__meta">Аренда алюминиевых лодок </p>
+      <a class="site-footer__top" href="#top">Наверх</a>
     </div>
   </footer>
 
@@ -590,3 +613,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+

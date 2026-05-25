@@ -796,9 +796,13 @@ border-radius: 4px;
 .section-header {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   gap: var(--stack-sm);
-  max-width: 38rem;
+  width: 100%;
+  max-width: 52rem;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 0;
 }
 
@@ -2469,14 +2473,7 @@ border-radius: 4px;
    ВСЕ ПРАВКИ — добавлено за один раз
    ============================================================ */
 
-/* 1. Заголовки секций — по центру */
-.section-header {
-  align-items: center;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 52rem;
-}
+/* 1. Заголовки секций — по центру (уже задано выше) */
 
 /* 2. Fleet header — по центру */
 .fleet-header {
@@ -2540,12 +2537,7 @@ border-radius: 4px;
 #gear .included-item h3 { color: #fff; }
 #gear .included-item p { color: rgba(255,255,255,0.75); }
 
-/* #included — тёмный ink */
-.section--ink { background: var(--color-ink); color: var(--color-linen); }
-.section--ink .section-header__desc { color: var(--color-mist); }
-.section--ink .eyebrow { color: var(--color-stone); }
-.section--ink .included-item { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.10); }
-.section--ink .included-item h3, .section--ink .included-item p { color: var(--color-linen); }
+/* #included использует родной section--dark из основного CSS */
 
 /* #services — фото-фон, полупрозрачные карточки */
 #services {

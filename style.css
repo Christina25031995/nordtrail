@@ -2652,3 +2652,32 @@ border-radius: 4px;
   font-size: 12px;
   opacity: 0.7;
 }
+
+.trust-review {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.trust-review img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.hero__context {
+  margin-top: 18px;
+  font-size: 14px;
+  opacity: 0.78;
+  letter-spacing: 0.02em;
+}
+
+.hero__location {
+  font-size: 14px;
+  opacity: 0.68;
+  margin-bottom: 14px;
+}
+.hero__inline-stats {
+  opacity: 0.84;
+}

@@ -2579,3 +2579,35 @@ border-radius: 4px;
 .map-route-btn { display: inline-flex; align-items: center; padding: 0.65rem 1.5rem; border: 1.5px solid var(--color-pine); border-radius: var(--radius-pill); color: var(--color-pine); font-size: var(--text-sm); font-weight: 500; text-decoration: none; transition: background 0.2s, color 0.2s; white-space: nowrap; }
 .map-route-btn:hover { background: var(--color-pine); color: #fff; }
 .map-address { font-size: var(--text-sm); color: var(--text-2); margin: 0; }
+
+
+/* ============================================================
+   РАЗДЕЛ: Какая рыба водится на Ладоге — коллаж
+   ============================================================ */
+
+.fish-section {
+  background: var(--color-lake);
+  padding: clamp(2rem, 5vw, 4rem) 0 0;
+}
+
+.fish-collage-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 clamp(var(--space-5), 4vw, var(--space-10));
+}
+
+.fish-collage-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px 16px 0 0;
+}
+
+@media (max-width: 600px) {
+  .fish-collage-wrap {
+    padding: 0;
+  }
+  .fish-collage-img {
+    border-radius: 0;
+  }
+}

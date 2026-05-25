@@ -2535,3 +2535,37 @@ border-radius: 4px;
   background: var(--color-boat);
   flex-shrink: 0;
 }
+
+/* === Карта: кнопка маршрута и адрес === */
+.map-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.map-route-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.5rem;
+  border: 1.5px solid var(--color-pine);
+  border-radius: var(--radius-pill);
+  color: var(--color-pine);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  text-decoration: none;
+  transition: background 0.2s var(--ease), color 0.2s var(--ease);
+  white-space: nowrap;
+}
+.map-route-btn:hover {
+  background: var(--color-pine);
+  color: #fff;
+}
+
+.map-address {
+  font-size: var(--text-sm);
+  color: var(--text-2);
+  margin: 0;
+}

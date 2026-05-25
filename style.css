@@ -1982,18 +1982,15 @@ border-radius: 4px;
   .fleet-header {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
     gap: var(--stack-sm);
-    max-width: 48rem;
-    margin: 0 auto;
+    max-width: 38rem;
   }
-
+  
   .fleet-header h2 {
     font-size: var(--text-2xl);
     margin: 0;
   }
-
+  
   .fleet-header__desc {
     font-size: var(--text-base);
     color: var(--color-slate);
@@ -2468,193 +2465,125 @@ border-radius: 4px;
   display: flex;
   flex-wrap: wrap;
 }
+/* ============================================================
+   ВСЕ ПРАВКИ — добавлено за один раз
+   ============================================================ */
 
-/* === Секция #included — единый тёмный ink вместо lake === */
-.section--ink {
-  background: var(--color-ink);
-  color: var(--color-linen);
-}
-.section--ink .section-header__desc {
-  color: var(--color-mist);
-}
-.section--ink .eyebrow {
-  color: var(--color-stone);
-}
-.section--ink .included-item {
-  background: rgba(255,255,255,0.06);
-  border-color: rgba(255,255,255,0.10);
-}
-.section--ink .included-item h3,
-.section--ink .included-item p {
-  color: var(--color-linen);
+/* 1. Заголовки секций — по центру */
+.section-header {
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 52rem;
 }
 
-/* === Секция #maintenance — фото-фон === */
-#maintenance {
+/* 2. Fleet header — по центру */
+.fleet-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--stack-sm);
+  max-width: 52rem;
+  margin: 0 auto;
+}
+.fleet-header h2 { font-size: var(--text-2xl); margin: 0; }
+.fleet-header__desc { font-size: var(--text-base); color: var(--color-slate); margin: 0; }
+
+/* 3. Fleet item styles */
+.fleet-section { background: var(--color-linen); }
+.fleet-section .container { display: flex; flex-direction: column; gap: clamp(2rem, 4vw, 3rem); }
+.fleet-item { background: #fff; border: 1px solid var(--color-border); border-radius: 20px; overflow: hidden; transition: box-shadow 0.35s var(--ease); }
+.fleet-item:hover { box-shadow: 0 20px 60px rgba(0,0,0,0.09); }
+.fleet-item__media { position: relative; aspect-ratio: 16/9; overflow: hidden; }
+.fleet-item__media img { width: 100%; height: 100%; object-fit: cover; object-position: center 60%; display: block; transition: transform 0.7s var(--ease); }
+.fleet-item:hover .fleet-item__media img { transform: scale(1.03); }
+.fleet-item__index { position: absolute; top: 1.25rem; left: 1.5rem; font-size: 0.6875rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+.fleet-item__body { padding: clamp(1.25rem, 3vw, 1.75rem) clamp(1.25rem, 3vw, 2rem); display: flex; flex-direction: column; gap: 1.25rem; }
+.fleet-item__specs { display: flex; flex-wrap: wrap; gap: 0; }
+.fleet-spec { display: flex; flex-direction: column; gap: 0.2rem; padding-right: 1.75rem; margin-right: 1.75rem; border-right: 1px solid var(--color-border); }
+.fleet-spec:last-child { border-right: none; padding-right: 0; margin-right: 0; }
+.fleet-spec__label { font-size: 0.625rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--color-slate-light); }
+.fleet-spec__value { font-family: var(--font-display); font-size: var(--text-xl); color: var(--color-ink); line-height: 1.1; }
+.fleet-item__cta { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 1.25rem; border-top: 1px solid var(--color-border); flex-wrap: wrap; }
+.fleet-item__name h3 { font-size: var(--text-lg); margin: 0 0 0.2rem; color: var(--color-ink); }
+.fleet-item__name p { font-size: var(--text-sm); color: var(--color-slate); margin: 0; }
+.fleet-item__cta .btn { white-space: nowrap; flex-shrink: 0; }
+@media (max-width: 640px) {
+  .fleet-item__media { aspect-ratio: 4/3; }
+  .fleet-item__cta { flex-direction: column; align-items: flex-start; }
+}
+
+/* 4. Ритм секций */
+
+/* #gear — фото-фон, карточки с зелёной полоской */
+#gear {
   position: relative;
-  background-image: url("images/maintenance-bg.jpg");
+  background-image: url("images/lake-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-#maintenance::before {
+#gear::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(12, 21, 25, 0.62);
+  background: rgba(12, 21, 25, 0.55);
   z-index: 0;
 }
-#maintenance > * {
-  position: relative;
-  z-index: 1;
-}
-#maintenance h2 { color: #ffffff; }
-#maintenance p  { color: rgba(255,255,255,0.75); }
-#maintenance .eyebrow { color: var(--color-stone); }
+#gear > * { position: relative; z-index: 1; }
+#gear h2, #gear h3, #gear p { color: #fff; }
+#gear .eyebrow { color: var(--color-stone); }
+#gear .included-item { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); }
+#gear .included-item:hover { background: rgba(255,255,255,0.14); }
+#gear .included-item h3 { color: #fff; }
+#gear .included-item p { color: rgba(255,255,255,0.75); }
 
-.maintenance-features {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 0.75rem 2.5rem;
-  list-style: none;
-  padding: 0;
-  margin-top: var(--stack-lg);
-}
-.maintenance-features li {
-  font-size: var(--text-base);
-  font-weight: var(--weight-medium);
-  color: rgba(255,255,255,0.85);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.maintenance-features li::before {
-  content: "";
-  display: block;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--color-boat);
-  flex-shrink: 0;
-}
+/* #included — тёмный ink */
+.section--ink { background: var(--color-ink); color: var(--color-linen); }
+.section--ink .section-header__desc { color: var(--color-mist); }
+.section--ink .eyebrow { color: var(--color-stone); }
+.section--ink .included-item { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.10); }
+.section--ink .included-item h3, .section--ink .included-item p { color: var(--color-linen); }
 
-/* === Карта: кнопка маршрута и адрес === */
-.map-actions {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  margin-top: 1.25rem;
-  flex-wrap: wrap;
-}
-
-.map-route-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.65rem 1.5rem;
-  border: 1.5px solid var(--color-pine);
-  border-radius: var(--radius-pill);
-  color: var(--color-pine);
-  font-size: var(--text-sm);
-  font-weight: var(--weight-medium);
-  text-decoration: none;
-  transition: background 0.2s var(--ease), color 0.2s var(--ease);
-  white-space: nowrap;
-}
-.map-route-btn:hover {
-  background: var(--color-pine);
-  color: #fff;
-}
-
-.map-address {
-  font-size: var(--text-sm);
-  color: var(--text-2);
-  margin: 0;
-}
-
-/* ============================================================
-   РИТМ СЕКЦИЙ — единый дизайн
-   ============================================================ */
-
-/* --- #gear: светлый фон, карточки с зелёной полоской сверху --- */
-#gear {
-  background: var(--color-linen) !important;
-  background-image: none !important;
-}
-#gear::before {
-  display: none !important;
-}
-#gear h2,
-#gear h3,
-#gear p {
-  color: inherit !important;
-}
-#gear .container {
-  padding-top: 0 !important;
-  position: static;
-  z-index: auto;
-}
-#gear .included-item {
-  border-top: 3px solid var(--color-pine) !important;
-  background: #fff;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
-}
-#gear .included-item:hover {
-  border-top-color: var(--color-pine-deep) !important;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.09);
-}
-#gear .included-item h3 {
-  color: var(--color-ink) !important;
-}
-#gear .included-item p {
-  color: var(--color-slate) !important;
-}
-
-/* --- #included: тёмный фон, иконки с зелёным свечением --- */
-.section--ink .included-item__icon {
-  filter: drop-shadow(0 0 8px rgba(58, 82, 72, 0.6));
-}
-.section--ink .included-item__icon svg,
-.section--ink .included-item__icon img {
-  filter: drop-shadow(0 0 6px rgba(58, 82, 72, 0.5));
-}
-
-/* --- #services: тёмно-зелёный фон, полупрозрачные карточки --- */
+/* #services — фото-фон, полупрозрачные карточки */
 #services {
-  background: var(--color-pine-deep) !important;
-  background-image: none !important;
+  position: relative;
+  background-image: url("images/services.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 #services::before {
-  display: none !important;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(12, 21, 25, 0.60);
+  z-index: 0;
 }
-#services > * {
-  position: static !important;
-  z-index: auto !important;
-}
-#services h2,
-#services h3 {
-  color: #ffffff !important;
-}
-#services p {
-  color: rgba(255, 255, 255, 0.75) !important;
-}
-#services .eyebrow {
-  color: var(--color-stone) !important;
-}
-#services .included-item {
-  background: rgba(255, 255, 255, 0.07) !important;
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
-  backdrop-filter: blur(8px);
-}
-#services .included-item:hover {
-  background: rgba(255, 255, 255, 0.13) !important;
-  border-color: rgba(255, 255, 255, 0.22) !important;
-}
-#services .included-item h3 {
-  color: #ffffff !important;
-}
-#services .included-item p {
-  color: rgba(255, 255, 255, 0.7) !important;
-}
+#services > * { position: relative; z-index: 1; }
+#services h2, #services h3 { color: #fff; }
+#services p { color: rgba(255,255,255,0.75); }
+#services .eyebrow { color: var(--color-stone); }
+#services .included-item { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); backdrop-filter: blur(8px); }
+#services .included-item:hover { background: rgba(255,255,255,0.14); }
+#services .included-item h3 { color: #fff; }
+#services .included-item p { color: rgba(255,255,255,0.7); }
+
+/* 5. Секция мастерской — фото-фон */
+#maintenance { position: relative; background-image: url("images/maintenance-bg.jpg"); background-size: cover; background-position: center; background-repeat: no-repeat; }
+#maintenance::before { content: ""; position: absolute; inset: 0; background: rgba(12,21,25,0.62); z-index: 0; }
+#maintenance > * { position: relative; z-index: 1; }
+#maintenance h2 { color: #fff; }
+#maintenance p { color: rgba(255,255,255,0.75); }
+#maintenance .eyebrow { color: var(--color-stone); }
+.maintenance-features { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 0.75rem 2.5rem; list-style: none; padding: 0; margin-top: var(--stack-lg); }
+.maintenance-features li { font-size: var(--text-base); font-weight: 500; color: rgba(255,255,255,0.85); display: flex; align-items: center; gap: 0.5rem; }
+.maintenance-features li::before { content: ""; display: block; width: 6px; height: 6px; border-radius: 50%; background: var(--color-boat); flex-shrink: 0; }
+
+/* 6. Карта — кнопка маршрута */
+.map-actions { display: flex; align-items: center; gap: 1.5rem; margin-top: 1.25rem; flex-wrap: wrap; }
+.map-route-btn { display: inline-flex; align-items: center; padding: 0.65rem 1.5rem; border: 1.5px solid var(--color-pine); border-radius: var(--radius-pill); color: var(--color-pine); font-size: var(--text-sm); font-weight: 500; text-decoration: none; transition: background 0.2s, color 0.2s; white-space: nowrap; }
+.map-route-btn:hover { background: var(--color-pine); color: #fff; }
+.map-address { font-size: var(--text-sm); color: var(--text-2); margin: 0; }

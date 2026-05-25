@@ -1982,15 +1982,18 @@ border-radius: 4px;
   .fleet-header {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: var(--stack-sm);
-    max-width: 38rem;
+    max-width: 48rem;
+    margin: 0 auto;
   }
-  
+
   .fleet-header h2 {
     font-size: var(--text-2xl);
     margin: 0;
   }
-  
+
   .fleet-header__desc {
     font-size: var(--text-base);
     color: var(--color-slate);
@@ -2568,4 +2571,90 @@ border-radius: 4px;
   font-size: var(--text-sm);
   color: var(--text-2);
   margin: 0;
+}
+
+/* ============================================================
+   РИТМ СЕКЦИЙ — единый дизайн
+   ============================================================ */
+
+/* --- #gear: светлый фон, карточки с зелёной полоской сверху --- */
+#gear {
+  background: var(--color-linen) !important;
+  background-image: none !important;
+}
+#gear::before {
+  display: none !important;
+}
+#gear h2,
+#gear h3,
+#gear p {
+  color: inherit !important;
+}
+#gear .container {
+  padding-top: 0 !important;
+  position: static;
+  z-index: auto;
+}
+#gear .included-item {
+  border-top: 3px solid var(--color-pine) !important;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+#gear .included-item:hover {
+  border-top-color: var(--color-pine-deep) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.09);
+}
+#gear .included-item h3 {
+  color: var(--color-ink) !important;
+}
+#gear .included-item p {
+  color: var(--color-slate) !important;
+}
+
+/* --- #included: тёмный фон, иконки с зелёным свечением --- */
+.section--ink .included-item__icon {
+  filter: drop-shadow(0 0 8px rgba(58, 82, 72, 0.6));
+}
+.section--ink .included-item__icon svg,
+.section--ink .included-item__icon img {
+  filter: drop-shadow(0 0 6px rgba(58, 82, 72, 0.5));
+}
+
+/* --- #services: тёмно-зелёный фон, полупрозрачные карточки --- */
+#services {
+  background: var(--color-pine-deep) !important;
+  background-image: none !important;
+}
+#services::before {
+  display: none !important;
+}
+#services > * {
+  position: static !important;
+  z-index: auto !important;
+}
+#services h2,
+#services h3 {
+  color: #ffffff !important;
+}
+#services p {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+#services .eyebrow {
+  color: var(--color-stone) !important;
+}
+#services .included-item {
+  background: rgba(255, 255, 255, 0.07) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: blur(8px);
+}
+#services .included-item:hover {
+  background: rgba(255, 255, 255, 0.13) !important;
+  border-color: rgba(255, 255, 255, 0.22) !important;
+}
+#services .included-item h3 {
+  color: #ffffff !important;
+}
+#services .included-item p {
+  color: rgba(255, 255, 255, 0.7) !important;
 }

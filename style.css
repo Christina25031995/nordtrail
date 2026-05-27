@@ -3,9 +3,6 @@
    Outdoor · minimal · boat-first editorial
    ========================================================================== */
 
-:root {
-  
-  /* Хедер на hero — кнопка Забронировать */
 .site-header:not(.is-scrolled) .header-cta {
   background: rgba(255, 255, 255, 0.15);
   border-color: rgba(255, 255, 255, 0.5);
@@ -24,6 +21,8 @@
   color: var(--color-linen);
 }
   /* Stone & water palette */
+
+:root {
   --color-ink: #12181c;
   --color-ink-soft: #1a2328;
   --color-charcoal: #2a3439;
@@ -143,7 +142,7 @@
 /* UI */
 --border: var(--color-border);
 --border-strong: var(--color-border-strong);
-
+}
 
 /* --- Base ----------------------------------------------------------------- */
 
@@ -1313,7 +1312,6 @@ align-content: space-between;  }
     grid-row: 3;
     margin-top: var(--stack-sm);
   }
-}
 
 /* --- Gallery · editorial grid --------------------------------------------- */
 
@@ -2183,9 +2181,6 @@ align-content: space-between;  }
     border-color: var(--color-pine-deep);
   }
 
-    pointer-events: none;
-    z-index: 1;
-  }
  
   .fleet-spec__value {
     font-family: var(--font-display);
@@ -2678,9 +2673,8 @@ align-content: space-between;  }
 }
 
 .fish-header {
-  margin-bottom: var(--stack-2xl);
+  margin-bottom: 0;
 }
-
 .fish-title {
   font-family: var(--font-display);
   font-size: clamp(2rem, 5vw, 3rem);
@@ -2699,7 +2693,7 @@ align-content: space-between;  }
 }
 
 .fish-category {
-  margin-bottom: var(--stack-2xl);
+  margin-bottom: var(--stack-lg);
 }
 
 .fish-category__label {
@@ -2729,18 +2723,17 @@ align-content: space-between;  }
 }
 
 .fish-card__img {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
 }
-
 .fish-card__img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center bottom;
   display: block;
   transition: transform 0.4s var(--ease);
 }
-
 .fish-card:hover .fish-card__img img {
   transform: scale(1.04);
 }
@@ -2766,9 +2759,8 @@ align-content: space-between;  }
 }
 
 .fish-zones {
-  margin-bottom: var(--stack-2xl);
+  margin-bottom: 0;
 }
-
 .fish-zones__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2845,8 +2837,7 @@ align-content: space-between;  }
   flex-direction: column;
   justify-content: flex-end;
   padding: var(--stack-2xl) var(--stack-xl);
-  background: linear-gradient(to right, rgba(18,24,28,0.88) 45%, transparent);
-}
+  background: linear-gradient(to right, rgba(18,24,28,1) 38%, rgba(18,24,28,0.6) 55%, transparent 75%);}
 
 .fish-outro__title {
   font-family: var(--font-display);

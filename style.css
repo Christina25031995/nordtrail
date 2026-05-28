@@ -2970,3 +2970,156 @@ align-content: space-between;  }
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+/* === Booking widget iframe in contact section ============================== */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--stack-xl);
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1.6fr 1fr;
+    gap: var(--stack-2xl);
+  }
+}
+
+.contact-booking {
+  width: 100%;
+}
+
+.booking-frame {
+  width: 100%;
+  height: 700px;
+  border: none;
+  border-radius: 16px;
+  display: block;
+}
+
+/* Auto-resize iframe height via JS message — fallback fixed height above */
+
+/* ============================================================
+   MOBILE FIXES — @media max-width: 640px
+   ============================================================ */
+@media (max-width: 640px) {
+
+  /* --- Gallery: 2 columns вместо 3 --- */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    column-count: unset;
+    gap: 8px;
+  }
+
+  /* --- Trust reviews: в столбик --- */
+  .trust-reviews {
+    grid-template-columns: 1fr !important;
+    gap: 12px;
+  }
+
+  .trust-review {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .trust-review img {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+  }
+
+  /* --- Trust panel layout: всё в один столбец --- */
+  .trust-panel {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: auto !important;
+  }
+
+  .trust-list {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+    border-left: none !important;
+    padding-left: 0 !important;
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--stack-md);
+  }
+
+  .trust-panel__cta {
+    grid-column: 1 !important;
+    grid-row: auto !important;
+  }
+
+  /* --- FAQ: убрать лишний отступ --- */
+  #faq.section {
+    padding-top: clamp(2rem, 5vw, 3.5rem);
+  }
+
+  #faq h2 {
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+  }
+
+  .faq-list {
+    margin-top: 0;
+  }
+
+  /* --- Hero: заголовок не вылезает за края --- */
+  .hero__title {
+    font-size: clamp(2.2rem, 10vw, 3.5rem);
+    word-break: break-word;
+  }
+
+  .hero__content {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+
+  /* --- Process steps: убрать горизонтальную сетку --- */
+  .process-steps {
+    display: flex !important;
+    flex-direction: column;
+    gap: var(--stack-md);
+  }
+
+  /* --- Fleet section --- */
+  .fleet-section .container {
+    padding-inline: var(--space-4);
+  }
+
+  /* --- Fish cards: крупнее на мобиле --- */
+  .fish-grid--3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .fish-grid--4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .fish-card__img {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* --- Scenario cards --- */
+  .scenario-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* --- Included grid --- */
+  .included-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* --- Section padding меньше --- */
+  .section {
+    padding-block: clamp(2.5rem, 7vw, 4rem);
+  }
+
+  /* --- Contact layout: в столбик --- */
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .booking-frame {
+    height: 750px;
+  }
+}

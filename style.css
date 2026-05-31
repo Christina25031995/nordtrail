@@ -573,18 +573,9 @@ color: var(--color-white);}
 }
 
 .hero__image {
-    background-image:
-      linear-gradient(
-        165deg,
-        var(--color-lake-shallow) 0%,
-        var(--color-lake) 40%,
-        var(--color-lake-deep) 100%
-      ),
-      url("images/hero.jpg");
-  
-    background-size: cover;
-    background-position: center;
-  }
+  object-fit: cover;
+  object-position: center 30%;
+}
 
 .hero__img {
   object-fit: cover;
@@ -3004,50 +2995,74 @@ align-content: space-between;  }
    ============================================================ */
 @media (max-width: 640px) {
 
-  /* --- Gallery: 2 columns вместо 3 --- */
+  /* --- Gallery: 1 колонка, крупные фото --- */
   .gallery-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    column-count: unset;
-    gap: 8px;
-  }
-
-  /* --- Trust reviews: в столбик --- */
-  .trust-reviews {
+    display: grid !important;
     grid-template-columns: 1fr !important;
-    gap: 12px;
+    column-count: unset !important;
+    gap: 10px;
   }
 
-  .trust-review {
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 12px;
-    padding: 16px;
+  .gallery-item {
+    aspect-ratio: 4 / 3;
+    border-radius: 10px;
   }
 
-  .trust-review img {
-    width: 44px;
-    height: 44px;
-    flex-shrink: 0;
-  }
-
-  /* --- Trust panel layout: всё в один столбец --- */
+  /* --- Trust panel: убрать grid, чистый flex --- */
   .trust-panel {
-    grid-template-columns: 1fr !important;
-    grid-template-rows: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--stack-lg);
+  }
+
+  .trust-panel__header,
+  .trust-panel__lead,
+  .trust-panel__cta {
+    grid-column: unset !important;
+    grid-row: unset !important;
   }
 
   .trust-list {
-    grid-column: 1 !important;
-    grid-row: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    grid-column: unset !important;
+    grid-row: unset !important;
     border-left: none !important;
     padding-left: 0 !important;
     border-top: 1px solid var(--color-border);
     padding-top: var(--stack-md);
   }
 
-  .trust-panel__cta {
-    grid-column: 1 !important;
-    grid-row: auto !important;
+  /* --- Trust reviews: flex-колонка, без grid-конфликтов --- */
+  .trust-reviews {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .trust-review {
+    display: flex !important;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 16px;
+  }
+
+  .trust-review img {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    flex-shrink: 0;
+  }
+
+  /* --- Section gap: меньше пустого места --- */
+  .section > .container {
+    gap: clamp(1.5rem, 5vw, 2.5rem);
+  }
+
+  .section-header {
+    gap: 0.5rem;
   }
 
   /* --- FAQ: убрать лишний отступ --- */
@@ -3122,4 +3137,49 @@ align-content: space-between;  }
   .booking-frame {
     height: 750px;
   }
+
+  /* --- Hero: кнопки на всю ширину --- */
+  .hero__actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero__btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* --- Hero: stats в 2 строки --- */
+  .hero__inline-stats {
+    font-size: 0.8rem;
+    gap: 0.35rem;
+  }
+
+  /* --- Section h2: чуть меньше на мобиле --- */
+  .section-header h2 {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  /* --- Gallery header: убрать лишний gap --- */
+  #gallery .section-header {
+    margin-bottom: 0;
+  }
+
+  /* --- Fleet item: убрать отрицательный margin --- */
+  .fleet-section .fleet-item {
+    margin-inline: 0;
+    border-radius: 14px;
+  }
+
+  /* --- Trust panel: padding меньше --- */
+  .trust-panel {
+    padding: clamp(1.25rem, 4vw, 1.75rem);
+  }
+
+  /* --- Process step num: меньше --- */
+  .process-step__num {
+    font-size: clamp(1.75rem, 6vw, 2.5rem);
+  }
 }
+
